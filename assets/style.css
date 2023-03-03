@@ -1,0 +1,542 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap');
+:root{
+    /* --------- COLORS ----------- */
+    --gray-background:#ffffff;
+    --gray-font:#8C9696;
+    --gray:#bebebe;
+    --blue-color:#1EAAF1;
+    --pink-color:#E16FA3;
+    --black-color:#010100;
+    --green-color:#81E2D0;
+
+}
+/* ---------- BASE -----------  */
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body
+{
+    width: 100vw;
+    height: 100vh;
+    overflow-y: hidden;
+    background-image:url(./img/background.jpg) ;
+    background-position: center;
+    background-size: cover;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main
+{
+    width: 65%;
+    height:80% ;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 0px 31px 0px rgba(0,0,0,0.36);
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    
+}
+section
+{
+    height: 100%;
+}
+
+/* ---------- LEFT CARD -----------  */
+
+.left-Card
+{
+    min-width: 25rem;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items:center ;
+    justify-content: space-around ;
+    background-image: url(./img/radiant-gradient.png);
+    background-size: cover;
+    border-radius: 20px 0 0 20px;
+}
+.logo
+{
+    width: 100%;
+    height: 10%;
+    font-weight: 500;
+    font-size: 1.5em;
+    padding:0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius:20px 0 0 0;
+}
+.logo::before
+{
+    content: ' \f54b';
+    font-family: fontAwesome;
+    margin: 0 1rem;
+
+}
+.product-illustration
+{
+    width: 100%;
+    height:70%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.shoes-config
+{
+    transform:translateX(50px);
+    position: absolute;
+    width: 120%;
+    transition: all .5s;
+}
+.shoe-black
+{
+    opacity: 1;
+}
+.shoe-blue
+{
+    opacity: 0;
+}
+.shoe-pink
+{
+   opacity: 0;
+}
+.shoe-green
+{
+    opacity: 0;
+}
+.social-media
+{
+
+    border-radius:0 0 0 20px;
+    width: 100%;
+    height:20%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1rem;
+}
+.icon
+{
+    width: 10px;
+    height: 10px;
+    z-index: 10;
+    
+}
+.icon:hover
+{
+    cursor: pointer;
+}
+
+/* ---------- RIGHT CARD -----------  */
+
+.right-Card
+{
+    width: 55%;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 10%;
+    padding: 1rem;
+
+}
+
+.bar
+{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 1rem;
+    padding: 2rem;
+}
+.circle
+{
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    background-image: url(./img/radiant-gradient.png);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.circle:hover
+{
+    cursor: pointer;
+    scale: 1.1;
+}
+.favorite-window
+{
+    clip-path: polygon(36% 6%, 42% 0, 48% 6%, 100% 6%, 100% 100%, 0 100%, 0 6%);
+    display: none   ;
+    position: absolute;
+    width: 15rem;
+    height: 20rem;
+    background: var(--gray);
+    top: 13%;
+    right: 1rem;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 31px 0px rgba(0,0,0,0.36);
+}
+.favorite-window.ativado
+{
+    display: flex;
+}
+.perfi-window
+{
+    clip-path: polygon(53% 6%, 60% 0, 66% 6%, 100% 6%, 100% 100%, 0 100%, 0 6%);
+    display: none;
+    position: absolute;
+    width: 15rem;
+    height: 20rem;
+    background: var(--gray);
+    top: 13%;
+    right: 1rem;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 31px 0px rgba(0,0,0,0.36);
+    
+}
+.perfi-window.ativado
+{
+    display: flex;
+}
+.sacola-window
+{
+
+    clip-path: polygon(75% 6%, 81% 0, 87% 6%, 100% 6%, 100% 100%, 0 100%, 0 6%);
+    display: none;
+    position: absolute;
+    width: 15rem;
+    height:20rem;
+    background: var(--gray);
+    top: 13%;
+    right: 1rem;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 31px 0px rgba(0,0,0,0.36);
+    
+}
+.sacola-window.ativado
+{
+    display: flex;
+}
+.description
+{
+    width: 100%;
+    height: 30%;
+}
+h3
+{
+    font-weight: 300;
+    font-size: .8em;
+    color: var(--gray-font);
+}
+h1
+{
+    font-size: 2.5em;
+    font-weight: 600;
+   
+}
+p
+{
+    font-size: .8em;
+    font-weight: 400;
+    color: var(--gray-font);
+}
+h2
+{
+    font-weight: 400;
+    font-style: italic;
+
+}
+.select-Size
+{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem 0;
+
+}
+h4
+{
+    font-size: .8em;
+    font-weight: 400;
+    margin: 1rem 0 ;
+}
+.size-Number
+{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(5, 2.5rem );
+    grid-template-rows: repeat(2, 2.5rem);
+}
+.size.selecionado
+{
+    border: 2px solid var(--blue-color);
+}
+.size-Number>div
+{
+    border: 1px solid var(--gray-font);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .8em;
+    cursor: pointer;
+}
+.size-Number>div:hover
+{
+    background-image: url(./img/radiant-gradient.png);
+    background-size: cover;
+    transform: scale(1.05);
+}
+.select-Color
+{
+    width: 100%;
+    height: 20%;
+}
+.colors
+{
+    display: flex;
+    gap: 1rem;
+}
+.circle-Color 
+{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.circle-Color.check.circle-Color.check::after
+{
+    content: ' \f00c';
+    font-family: "fontAwesome";
+    color: white;
+}
+.circle-Color:hover
+{
+    transform: scale(1.05);
+}
+.black
+{
+    background: var(--black-color);
+}
+.blue
+{
+    background: var(--blue-color);
+}
+.pink
+{
+    background: var(--pink-color);
+}
+.green
+{
+    background: var(--green-color);
+}
+
+.confirm-Button
+{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    gap: 1rem;
+}
+.add-Product
+{
+    width: 15rem;
+    height: 2.5rem;
+    background: var(--black-color);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.add-Product::before
+{
+    content: ' \f290';
+    font-family: "fontAwesome";
+    padding: .5rem;
+    color: white;
+}
+.favorite
+{
+    width: 3rem;
+    height: 2.5rem;
+    background: white;
+    border: 1px solid var(--gray-font);
+    border-radius: 5px;
+    cursor: pointer;
+}
+.fa-heart
+{
+    font-size: 1.5em;
+    
+}
+button:hover
+{
+    transform: scale(1.05);
+}
+
+@media(max-width:1000px){
+    
+/* ---------- RIGHT CARD -----------  */
+    h1{
+        font-size: 2em;
+    }
+    p{
+        font-size: .6em;
+    }
+}
+@media(max-width:900px){
+    main{
+        width: 95%;
+        height: 95%;
+    }
+} 
+@media(max-width:700px){
+
+/* ---------- BASE -----------  */
+    body{
+        overflow-y: scroll;
+    
+    }
+/* ---------- LEFT CARD -----------  */
+
+    main{
+        flex-direction: column;
+        height: 100%;
+    }
+    section{
+        height: 50%;
+    }
+    .left-Card{
+        border-radius: 20px 20px 0 0;
+        width: 100%;
+    }
+    .shoes-config{
+        width: auto;
+        height: 140%;
+        transform:translateX(0px) translateY(0px);
+    }
+    .product-illustration{
+        height: 80%;
+        overflow: hidden;
+    }
+    .social-media{
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 10%;
+        height:15%;
+    }
+/* ---------- RIGHT CARD -----------  */
+
+    .right-Card{
+        width: 100%;
+        padding: 0;
+        margin-left:0;
+        gap: 1rem;
+        position: relative;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+    }
+    .bar{
+        width: auto;
+        height: auto;
+        position: absolute;
+        top: -10px;
+        right: 10px;
+    }
+    .description{
+        padding: 3rem;
+        width: 100%;
+        height: 100%;
+        grid-row: 1;
+        grid-column: 1;
+    }
+    .select-Size{
+        padding: 3rem;
+        width: 100%;
+        height: 100%;
+    }
+    .select-Color{
+        padding: 3rem;
+        width: 100%;
+        height: 100%;
+    }
+    .confirm-Button{
+        padding: 3rem;
+        width: 100%;
+        height: 100%;
+        grid-row: 2;
+        grid-column: 1;
+    }
+    .size-Number{
+        gap: 1rem;
+        grid-template-columns: repeat(5, 2rem );
+        grid-template-rows: repeat(2, 2rem);
+    }
+    .confirm-Button{
+        display: flex;
+        align-items: center;
+    }
+
+}
+@media(max-width:450px){
+/* ---------- BASE -----------  */
+    body{
+        height: auto;
+    }
+    main{
+        height: auto;
+    }
+/* ---------- LEFT CARD -----------  */
+    
+    .left-Card{
+        height: 50vh;
+
+    }
+    .shoes-config{
+        height: 100%;
+    }
+
+/* ---------- RIGHT CARD -----------  */
+
+    .right-Card{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .description,
+    .select-Size,
+    .select-Color,
+    .confirm-Button{
+     padding: 1rem 2rem;
+    }
+    .bar{
+        top:-15px;
+    }
+
+}
