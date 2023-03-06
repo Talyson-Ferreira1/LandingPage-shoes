@@ -8,8 +8,17 @@
     <link rel="stylesheet" href="./assets/style.css">
     <title>Shoes</title>
 </head>
-<body>
-    <main>
+<body onload="load()">
+    <div class="containerLoad">
+
+        <div class="loader">
+            <span class="bar-loading"></span>
+            <span class="bar-loading"></span>
+            <span class="bar-loading"></span>
+        </div>
+
+    </div>
+    <main class="aplicacao">
         <section class="left-Card">
             <div class="logo">Boots</div>
             <div class="card product-illustration" >
@@ -35,9 +44,17 @@
 
         <section class="right-Card">
 
-            <div class="favorite-window "> Favoritos</div>
-            <div class="perfi-window">Perfil</div>
-            <div class="sacola-window">Sacola</div>
+            <div class="favorite-window">
+                <div class="containerFavorite"></div>
+                <button class="clearList favoriteList" >Esvaziar lista</button>
+            </div>
+            <div class="perfi-window">
+                Perfil
+            </div>
+            <div class="sacola-window">
+                <div class="containerSacola"></div>
+                <button class="clearList sacolaList" >Esvaziar lista</button>
+            </div>
 
             <div class="group bar">
 
@@ -77,15 +94,15 @@
             <div class="group select-Color">
                 <h4>Select color</h4>
                 <div class="colors">
-                    <div class="circle-Color black check"></div>
+                    <div class="circle-Color black check" value="black"></div>
                     <div class="circle-Color blue"></div>
                     <div class="circle-Color pink"></div>
                     <div class="circle-Color green"></div>
                 </div>
             </div>
             <div class="group confirm-Button" >
-                <button class="add-Product" >Add to cart</button>
-                <button class="favorite">
+                <button class="add-Product button2" >Adicionar a sacola</button>
+                <button class="favorite botao ">
                     <i class=" fa-regular fa-heart"></i>
                 </button>
             </div>
